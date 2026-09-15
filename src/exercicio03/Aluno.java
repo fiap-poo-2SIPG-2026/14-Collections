@@ -12,6 +12,7 @@ public class Aluno {
     }
 
     @Override
+<<<<<<< HEAD
     public String toString() {
         return rm + "  |  " + nome;
     }
@@ -21,11 +22,26 @@ public class Aluno {
         if (o == null || getClass() != o.getClass()) return false;
         Aluno aluno = (Aluno) o;
         return rm == aluno.rm;
+=======
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Aluno aluno = (Aluno) o;
+        return rm == aluno.rm && Objects.equals(nome, aluno.nome);
+>>>>>>> 3aeeeee54d74b4db5320b68cf19b7a5e610258fd
     }
 
     @Override
     public int hashCode() {
+<<<<<<< HEAD
         return Objects.hashCode(rm);
+=======
+        return Objects.hash(rm, nome);
+    }
+
+    @Override
+    public String toString() {
+        return rm + " | " + nome;
+>>>>>>> 3aeeeee54d74b4db5320b68cf19b7a5e610258fd
     }
 
     public int getRm() {
